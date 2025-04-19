@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock-box">
+            <div id="showDate">25 January 2025</div>
+            <div class="showTime">
+                <span id="hrs">15</span>
+                <span>:</span>
+                <span id="min">23</span>
+                <span>:</span>  
+                <span id="sec">25</span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+  function showDateTime() {
+        let showDate = document.getElementById("showDate");
+        let hrs = document.getElementById("hrs");
+        let min = document.getElementById("min");
+        let sec = document.getElementById("sec");
+
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+        ];
+
+        // create a JavaScript Date object
+        let date = new Date();
+        // getDate() - date
+        // getMonth() - month in number (0-11)
+        // getFullYear() - 4 digit year 
+        // getHours()
+        // getMinutes()
+        // getSeconds()
+
+        let dispDate = date.getDate() + " " + monthNames[date.getMonth()] + " " + date.getFullYear();
+        showDate.innerHTML = dispDate;
+
+        let dispHrs = date.getHours();
+        let dispMin = date.getMinutes();
+        let dispSec = date.getSeconds();
+
+        // if values are < 10 prefix 0
+        dispHrs = (dispHrs < 10 ? "0" : "") + dispHrs; 
+        dispMin = (dispMin < 10 ? "0" : "") + dispMin; 
+        dispSec = (dispSec < 10 ? "0" : "") + dispSec; 
+
+        hrs.innerHTML = dispHrs;
+        min.innerHTML = dispMin;
+        sec.innerHTML = dispSec;
+    }
+
+       setInterval(showDateTime, 1000);
+    </script>
+</body>
+</html>

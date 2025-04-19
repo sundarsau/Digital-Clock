@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+.clock-box{
+   position: absolute;
+   width: 750px;
+   height: 300px;
+   top:25%;
+   left:25%;
+   background-color: #000;
+   border-radius: 10px;
+}
+
+#showDate{
+    font-size: 63px;
+    height: 120px;
+    color:aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showTime{
+    font-size: 144px;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
