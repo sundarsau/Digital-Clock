@@ -3,4 +3,7 @@ In this creative coding project, we have created a fully functional digital cloc
 
 1. Download the repository from https://github.com/sundarsau/Digital-Clock
 2. Extract all the files in a folder
-3. Run index.html in the browser. 
+3. Run index.html in the browser.
+
+# License
+This is an MIT license, you can modify the code according to your requirements
